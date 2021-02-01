@@ -17,3 +17,19 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
+
+  .half {
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+  }
+
+  .whole {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .page {
+    margin-left: 40%;
+    margin-right: 40%;
+  }

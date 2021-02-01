@@ -1,5 +1,7 @@
-<h1>Burgers!</h1>
+<h1 class="page">Burgers!</h1>
 
+<dev class="whole">
+<dev class="half">
 <h2>Burgers that have not been devoured!</h2>
 
 <ul>
@@ -9,29 +11,27 @@
     {{/unless}}
   {{/each}}
 </ul>
+</dev>
 
+<dev class="half">
 <h2>Burgers that have been devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{burgers devoured=false}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
+</dev>
+</dev>
 
-<h2>Add a Burger</h2>
+<h2 class="page">Add a Burger</h2>
 <form class="create-form">
 
-  <div class="form-group">
+  <div class="form-group page">
     <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="devoured">already devoured?</label><br>
-    <input type="radio" name="sleepy" value="true" checked> Devoured!<br>
-    <input type="radio" name="sleepy" value="false"> Not Eaten
   </div>
 
   <button type="submit">Add Burger</button>
